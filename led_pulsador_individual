@@ -1,0 +1,32 @@
+from machine import Pin as pin
+from time import sleep
+
+boton1 = pin(15)
+boton2 = pin(2)
+boton3 = pin(4)
+boton4 = pin(16)
+led1 = pin(17)
+led2 = pin(1)
+led3 = pin(18)
+led4 = pin(19)
+
+boton1=pin(15, pin.IN, pin.PULL_UP)
+boton2=pin(2, pin.IN, pin.PULL_UP)
+boton3=pin(4, pin.IN, pin.PULL_UP)
+boton4=pin(16, pin.IN, pin.PULL_UP)
+led1=pin(17, pin.OUT)
+led2=pin(1, pin.OUT)
+led3=pin(18, pin.OUT)
+led4=pin(19, pin.OUT)
+
+
+while True:
+    led1.value(boton1.value())
+    sleep=(1)
+    led2.value(boton2.value())
+    sleep=(1)
+    led3.value(boton3.value())
+    sleep=(1)
+    led4.value(boton4.value())
+    sleep=(1)
+    
